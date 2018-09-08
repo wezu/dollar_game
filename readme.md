@@ -1,5 +1,5 @@
-##
-##That Holly Game or The Dollar Game
+# T.H.G.
+## That Holly Game or The Dollar Game
 
 This game was inspired by a Numberphile video made by Brady Haran and Dr Holly Krieger -'The Dollar Game'
 The hexagon based graphs resembles the shape of aTetrahydrogestrinone particle, hence the name T.H.G.
@@ -19,7 +19,7 @@ python -m pip install panda3d
 There are also self-contained executable versions for windows and linux:
 TODO:post links
 
-##How to play?
+## How to play?
 
 To win the game remove all negative numbers from the graph.
 Left click on a node to take 1 from each neighbour
