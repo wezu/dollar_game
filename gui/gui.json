@@ -1,0 +1,173 @@
+{"frame":[
+            {"name":"main_menu",
+             "size":[320, 320],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [
+                            {"txt":"New Game",  "cmd":"app.gui.show_hide('new_game_menu', 'main_menu')","width":288, "pos":[16,144]},
+                            {"txt":"Load Game", "cmd":"app.show_load_menu()","width":288, "pos":[16,176]},
+                            {"txt":"Options",   "cmd":"app.gui.show_hide('options_menu', 'main_menu')","width":288, "pos":[16,208]},
+                            {"txt":"Info",      "cmd":"app.gui.show_hide('info_menu', 'main_menu')","width":288, "pos":[16,240]},
+                            {"txt":"Exit",      "cmd":"app.exit()","width":288, "pos":[16,272]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1}
+                    ]
+            },
+            {"name":"new_game_menu",
+             "size":[320, 512],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [   {"txt":"Tutorial","cmd":"app.start_game(-1)","width":288, "pos":[16,160]},
+                            {"txt":"Very Easy","cmd":"app.start_game(0)","width":288, "pos":[16,192]},
+                            {"txt":"Easy",     "cmd":"app.start_game(1)","width":288, "pos":[16,224]},
+                            {"txt":"Medium",   "cmd":"app.start_game(2)","width":288, "pos":[16,256]},
+                            {"txt":"Hard",     "cmd":"app.start_game(3)","width":288, "pos":[16,288]},
+                            {"txt":"Very Hard","cmd":"app.start_game(4)","width":288, "pos":[16,320]},
+                            {"txt":"Insane",   "cmd":"app.start_game(5)","width":288, "pos":[16,352]},
+                            {"txt":"Nightmare","cmd":"app.start_game(6)","width":288, "pos":[16,384]},
+                            {"txt":"HELL!!",   "cmd":"app.start_game(7)","width":288, "pos":[16,416]},
+
+                            {"txt":"Back",  "cmd":"app.gui.show_hide('main_menu','new_game_menu')","width":288, "pos":[16,456]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1},
+                    {"txt":"Select difficulty level:", "pos":[0,132], "big_font":0}
+                    ]
+            },
+            {"name":"game_over",
+             "size":[512, 320],
+             "pos":[-256,32],
+             "parent":"top",
+             "header":0,
+             "scroll":0,
+             "button":  [
+                        {"txt":"Save Screenshot","cmd":"app.save_screen()","width":288, "pos":[112,208], "name":"win_ss_button"},
+                        {"txt":"New Game","cmd":"app.gui.show_hide('new_game_menu', 'game_over')","width":288, "pos":[112,240],  "name":"win_new_button"},
+                        {"txt":"Exit","cmd":"app.exit()","width":288, "pos":[112,272], "name":"win_exit_button"}
+                        ],
+             "text":[
+                    {"txt":"You Win!", "pos":[0,-8]},
+                    {"txt":"Lorem ipsum", "pos":[128,96], "mono_font":1, "name":"win_txt", "align":"left"}
+                    ]
+            },
+            {"name":"save_menu",
+             "size":[320, 320],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [
+                            {"txt":"Save","cmd":"app.save_to_file()","width":288, "pos":[16,240]},
+                            {"txt":"Back","cmd":"app.gui.show_hide('in_game_menu','save_menu')","width":288, "pos":[16,272]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1},
+                    {"txt":"Save game as:", "pos":[0,148], "big_font":0}
+                    ],
+            "input":[
+                    {"txt":"save_001", "width":288, "pos":[16,180], "name":"save_input"}
+                    ]
+
+            },
+            {"name":"load_menu",
+             "size":[320, 512],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":1024,
+             "button":  [
+                        {"txt":"Back","cmd":"app.gui.show_hide('main_menu','load_menu')","width":256, "pos":[32,134]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1}
+                    ]
+            },
+            {"name":"options_menu",
+             "size":[320, 320],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [
+                            {"txt":"Back","cmd":"app.gui.show_hide('main_menu','options_menu')","width":288, "pos":[16,272]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1},
+                    {"txt":"Music volume:\n\n\n\nSound volume:", "pos":[0,132], "big_font":0}
+                    ],
+            "slider":[
+                     {"value":0.5,"cmd":"app.set_music_volume(value)", "width":288, "pos":[16,164], "name":"music-volume1"},
+                     {"value":0.5,"cmd":"app.set_sound_volume(value)", "width":288, "pos":[16,230], "name":"sound-volume1"}
+                    ]
+            },
+            {"name":"in_game_options_menu",
+             "size":[320, 320],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [
+                            {"txt":"Back","cmd":"app.gui.show_hide('in_game_menu','in_game_options_menu')","width":288, "pos":[16,272]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1},
+                    {"txt":"Music volume:\n\n\n\nSound volume:", "pos":[0,132], "big_font":0}
+                    ],
+            "slider":[
+                     {"value":0.5,"cmd":"app.set_music_volume(value)", "width":288, "pos":[16,164], "name":"music-volume2"},
+                     {"value":0.5,"cmd":"app.set_sound_volume(value)", "width":288, "pos":[16,230], "name":"sound-volume2"}
+                    ]
+            },
+            {"name":"info_menu",
+             "size":[640, 512],
+             "pos":[-320,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [
+                            {"txt":"Back",  "cmd":"app.gui.show_hide('main_menu','info_menu')","width":288, "pos":[176,464]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1},
+                    {"txt":"To win the game remove all negative numbers from the graph.\nLeft click on a node to take 1 from each neighbour\nRight click on a node to give 1 to each neighbour\nPress and hold left mouse button to pan the view\nPress and hold right mouse button to rotate the view\n\nThis game was inspired by a Numberphile video made by\n Brady Haran and Dr Holly Krieger -'The Dollar Game'\nThe hexagon based graphs resembles the shape of a\nTetrahydrogestrinone particle, hence the name T.H.G.\nThough it can have other meanings...\n\nThis game is Free and Open Sourced\nWritten in Python, powered by Panda3D\n\n Support the creators, send $1-5 via PayPall:\nwezu.dev@gmail.com", "pos":[0,132], "mono_font":1}
+                    ]
+            },
+            {"name":"in_game_menu",
+             "size":[320, 332],
+             "pos":[-160,32],
+             "parent":"top",
+             "header":128,
+             "scroll":0,
+             "button":  [
+                            {"txt":"Main Menu (Quit)","cmd":"app.exit_to_main()","width":288, "pos":[16,144]},
+                            {"txt":"Save Game",       "cmd":"app.show_save_menu()","width":288, "pos":[16,176]},
+                            {"txt":"Options",         "cmd":"app.gui.show_hide('in_game_options_menu', 'in_game_menu')","width":288, "pos":[16,208]},
+                            {"txt":"Show/Hide help",  "cmd":"app.gui.toggle(['help_txt', 'help_img'])","width":288, "pos":[16,240]},
+                            {"txt":"Back to Game",    "cmd":"app.gui.show_hide('menu_button', 'in_game_menu')","width":288, "pos":[16,272]}
+                        ],
+             "text":[
+                    {"txt":"T.H.G.", "pos":[0,-8]},
+                    {"txt":"CREATED BY WEZU", "pos":[0,104], "mono_font":1}
+                    ]
+            }
+        ],
+"button":{"menu_button":{"txt":"Menu",  "cmd":"app.gui.show_hide('in_game_menu', 'menu_button')","width":128, "pos":[0,0], "parent":"top_left"}},
+"icon": {},
+"slider":{},
+"input":{},
+"bar":  {},
+"text": {"help_txt":{"txt":"Left click on a node to take 1 from each neighbour\nRight click on a node to give 1 to each neighbour\nPress and hold left mouse button to pan the view\nPress and hold right mouse button to rotate the view\nUse the mouse wheel to zoom the camera in or out\nTo win the game remove all negative numbers from the graph.", "pos":[180,0],"parent":"top_left", "align":"left", "mono_font":1}},
+"img": {"help_img":{"texture":"tex/help.png", "parent":"top_left", "pos":[0,64]}}
+}

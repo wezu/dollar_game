@@ -1,0 +1,260 @@
+<CoordinateSystem> { Z-Up }
+
+<Texture> Tex6 {
+  "stars/sky_bottom4.png"
+  <Scalar> format { rgb }
+  <Scalar> wrapu { clamp }
+  <Scalar> wrapv { clamp }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> envtype { modulate }
+}
+<Texture> Tex5 {
+  "stars/sky_back6.png"
+  <Scalar> format { rgb }
+  <Scalar> wrapu { clamp }
+  <Scalar> wrapv { clamp }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> envtype { modulate }
+}
+<Texture> Tex4 {
+  "stars/sky_right1.png"
+  <Scalar> format { rgb }
+  <Scalar> wrapu { clamp }
+  <Scalar> wrapv { clamp }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> envtype { modulate }
+}
+<Texture> Tex3 {
+  "stars/sky_left2.png"
+  <Scalar> format { rgb }
+  <Scalar> wrapu { clamp }
+  <Scalar> wrapv { clamp }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> envtype { modulate }
+}
+<Texture> Tex2 {
+  "stars/sky_front5.png"
+  <Scalar> format { rgb }
+  <Scalar> wrapu { clamp }
+  <Scalar> wrapv { clamp }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> envtype { modulate }
+}
+<Texture> Tex1 {
+  "stars/sky_top3.png"
+  <Scalar> format { rgb }
+  <Scalar> wrapu { clamp }
+  <Scalar> wrapv { clamp }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear }
+  <Scalar> envtype { modulate }
+}
+<Group> top {
+  <VertexPool> top.verts {
+    <Vertex> 0 {
+      -50 -50 50
+      <UV> { 0 0 }
+      <Normal> { 0 0 -1 }
+    }
+    <Vertex> 1 {
+      -50 50 50
+      <UV> { 0 1 }
+      <Normal> { 0 0 -1 }
+    }
+    <Vertex> 2 {
+      50 50 50
+      <UV> { 1 1 }
+      <Normal> { 0 0 -1 }
+    }
+    <Vertex> 3 {
+      50 -50 50
+      <UV> { 1 0 }
+      <Normal> { 0 0 -1 }
+    }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex1 }
+    <VertexRef> { 0 1 2 <Ref> { top.verts } }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex1 }
+    <VertexRef> { 2 3 0 <Ref> { top.verts } }
+  }
+}
+<Group> front {
+  <VertexPool> front.verts {
+    <Vertex> 0 {
+      -50 -50 -50
+      <UV> { 0 0 }
+      <Normal> { 0 1 0 }
+    }
+    <Vertex> 1 {
+      -50 -50 50
+      <UV> { 0 1 }
+      <Normal> { 0 1 0 }
+    }
+    <Vertex> 2 {
+      50 -50 50
+      <UV> { 1 1 }
+      <Normal> { 0 1 0 }
+    }
+    <Vertex> 3 {
+      50 -50 -50
+      <UV> { 1 0 }
+      <Normal> { 0 1 0 }
+    }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex2 }
+    <VertexRef> { 0 1 2 <Ref> { front.verts } }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex2 }
+    <VertexRef> { 2 3 0 <Ref> { front.verts } }
+  }
+}
+<Group> left {
+  <VertexPool> left.verts {
+    <Vertex> 0 {
+      -50 50 -50
+      <UV> { 0 0 }
+      <Normal> { 1 0 0 }
+    }
+    <Vertex> 1 {
+      -50 50 50
+      <UV> { 0 1 }
+      <Normal> { 1 0 0 }
+    }
+    <Vertex> 2 {
+      -50 -50 50
+      <UV> { 1 1 }
+      <Normal> { 1 0 0 }
+    }
+    <Vertex> 3 {
+      -50 -50 -50
+      <UV> { 1 0 }
+      <Normal> { 1 0 0 }
+    }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex3 }
+    <VertexRef> { 0 1 2 <Ref> { left.verts } }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex3 }
+    <VertexRef> { 2 3 0 <Ref> { left.verts } }
+  }
+}
+<Group> right {
+  <VertexPool> right.verts {
+    <Vertex> 0 {
+      50 -50 -50
+      <UV> { 0 0 }
+      <Normal> { -1 0 0 }
+    }
+    <Vertex> 1 {
+      50 -50 50
+      <UV> { 0 1 }
+      <Normal> { -1 0 0 }
+    }
+    <Vertex> 2 {
+      50 50 50
+      <UV> { 1 1 }
+      <Normal> { -1 0 0 }
+    }
+    <Vertex> 3 {
+      50 50 -50
+      <UV> { 1 0 }
+      <Normal> { -1 0 0 }
+    }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex4 }
+    <VertexRef> { 0 1 2 <Ref> { right.verts } }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex4 }
+    <VertexRef> { 2 3 0 <Ref> { right.verts } }
+  }
+}
+<Group> back {
+  <VertexPool> back.verts {
+    <Vertex> 0 {
+      50 50 -50
+      <UV> { 0 0 }
+      <Normal> { 0 -1 0 }
+    }
+    <Vertex> 1 {
+      50 50 50
+      <UV> { 0 1 }
+      <Normal> { 0 -1 0 }
+    }
+    <Vertex> 2 {
+      -50 50 50
+      <UV> { 1 1 }
+      <Normal> { 0 -1 0 }
+    }
+    <Vertex> 3 {
+      -50 50 -50
+      <UV> { 1 0 }
+      <Normal> { 0 -1 0 }
+    }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex5 }
+    <VertexRef> { 0 1 2 <Ref> { back.verts } }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex5 }
+    <VertexRef> { 2 3 0 <Ref> { back.verts } }
+  }
+}
+<Group> bottom {
+  <VertexPool> bottom.verts {
+    <Vertex> 0 {
+      -50 -50 -50
+      <UV> { -5.96046e-008 1 }
+      <Normal> { 0 0 1 }
+    }
+    <Vertex> 1 {
+      50 -50 -50
+      <UV> { 1 1 }
+      <Normal> { 0 0 1 }
+    }
+    <Vertex> 2 {
+      50 50 -50
+      <UV> { 1 1.19209e-007 }
+      <Normal> { 0 0 1 }
+    }
+    <Vertex> 3 {
+      -50 50 -50
+      <UV> { 1.49012e-007 0 }
+      <Normal> { 0 0 1 }
+    }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex6 }
+    <VertexRef> { 0 1 2 <Ref> { bottom.verts } }
+  }
+  <Polygon> {
+    <RGBA> { 1 1 1 1 }
+    <TRef> { Tex6 }
+    <VertexRef> { 2 3 0 <Ref> { bottom.verts } }
+  }
+}
