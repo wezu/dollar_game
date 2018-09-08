@@ -1,5 +1,5 @@
 //GLSL
-#version 140
+#version 130
 uniform sampler2D text_tex;
 uniform sampler2D value_tex;
 uniform sampler2D base_tex;

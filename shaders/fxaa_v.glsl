@@ -1,5 +1,5 @@
 //GLSL
-#version 140
+#version 130
 in vec2 p3d_MultiTexCoord0;
 in vec4 p3d_Vertex;
 uniform mat4 p3d_ModelViewProjectionMatrix;
