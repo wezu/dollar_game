@@ -25,7 +25,7 @@ import shutil
 import random
 import math
 import builtins
-from collections import namedtuple
+from collections import OrderedDict
 from time import gmtime, strftime
 from itertools import islice
 import string
@@ -226,7 +226,7 @@ class App(DirectObject):
         gnode.add_geom(geo)
 
         #make the graph
-        self.graph={}
+        self.graph=OrderedDict()
         for i, point in enumerate(points):
             self.graph[point]=set()
             for p in points:
@@ -509,7 +509,7 @@ class App(DirectObject):
         count=len(data['graph_keys'])
         graph_keys=[tuple(v) for v in data['graph_keys']]
         graph_values=[[tuple(j) for j in i] for i in data['graph_values']]
-        self.graph=dict(zip(graph_keys, graph_values))
+        self.graph=OrderedDict(zip(graph_keys, graph_values))
         self.values=data['values']
         self.time=data['time']
         self.moves=data['moves']
