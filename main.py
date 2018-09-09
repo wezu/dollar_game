@@ -76,7 +76,7 @@ class App(DirectObject):
             #load the music
             self.music=loader.load_music('music/starflash.ogg')
             self.music.set_loop(True)
-            self.music.set_loop_count(0)
+
             #load sounds
             self.sfx={}
             self.sfx['up']=loader.load_sfx('sounds/up.ogg')
