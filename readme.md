@@ -1,5 +1,6 @@
 # T.H.G.
 ## That Holly Game or The Dollar Game
+![screenshot](https://github.com/wezu/dollar_game/blob/master/art/screen4.png)
 
 This game was inspired by a Numberphile video made by Brady Haran and Dr Holly Krieger -'The Dollar Game'
 The hexagon based graphs resembles the shape of aTetrahydrogestrinone particle, hence the name T.H.G.
